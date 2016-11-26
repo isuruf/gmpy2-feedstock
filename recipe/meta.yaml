@@ -10,7 +10,7 @@ source:
   md5: b5aada3ee5afb316ea94604f45192054
 
 build:
-  number: 0
+  number: 1
   skip: true        # [win and not py35]
   features:
     - vc14          # [win and py35]
@@ -44,6 +44,7 @@ test:
 about:
   home: https://pypi.python.org/pypi/gmpy2
   license: LGPL 3
+  license_file: COPYING.LESSER
   summary: 'GMP/MPIR, MPFR, and MPC interface to Python 2.6+ and 3.x'
 
 extra:
