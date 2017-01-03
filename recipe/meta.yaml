@@ -17,6 +17,7 @@ build:
   script:
     - python setup.py install --shared=$PREFIX                                          # [unix]
     - python setup.py build_ext -f --shared=%LIBRARY_PREFIX% -DMSC_USE_DLL=1 install    # [win]
+    - python test/runtests.py
 
 requirements:
   build:
