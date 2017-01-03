@@ -1,4 +1,4 @@
-{% set version = "2.0.7" %}
+{% set version = "2.0.8" %}
 
 package:
   name: gmpy2
@@ -7,10 +7,10 @@ package:
 source:
   fn: gmpy2-{{version}}.zip
   url: https://pypi.io/packages/source/g/gmpy2/gmpy2-{{ version }}.zip
-  md5: b5aada3ee5afb316ea94604f45192054
+  sha256: dd233e3288b90f21b0bb384bcc7a7e73557bb112ccf0032ad52aa614eb373d3f
 
 build:
-  number: 1
+  number: 0
   skip: true        # [win and not py35]
   features:
     - vc14          # [win and py35]
