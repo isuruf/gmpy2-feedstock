@@ -10,7 +10,7 @@ source:
   sha256: dd233e3288b90f21b0bb384bcc7a7e73557bb112ccf0032ad52aa614eb373d3f
 
 build:
-  number: 0
+  number: 1
   skip: true        # [win and not py35]
   features:
     - vc14          # [win and py35]
@@ -23,13 +23,13 @@ requirements:
     - toolchain
     - gmp           # [unix]
     - mpir          # [win]
-    - mpfr
+    - mpfr 3.*
     - mpc
     - python
   run:
     - gmp           # [unix]
     - mpir          # [win]
-    - mpfr
+    - mpfr 3.*
     - mpc
     - python
 
