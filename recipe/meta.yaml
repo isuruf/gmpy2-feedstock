@@ -15,8 +15,8 @@ build:
   features:
     - vc14          # [win and py>=35]
   script:
-    - python setup.py install --shared=$PREFIX                         # [unix]
-    - python setup.py build_ext -f --shared=%LIBRARY_PREFIX% install   # [win]
+    - python setup.py install --shared=$PREFIX                                               # [unix]
+    - python setup.py build_ext -f --shared=%LIBRARY_PREFIX% -DMSC_USE_DLL -DMPIR  install   # [win]
 
 requirements:
   build:
