@@ -7,7 +7,7 @@ package:
 source:
   fn: gmpy2-master.zip
   url: https://github.com/aleaxit/gmpy/archive/8091d45a604b29022d9299f77d1379211f9bb666.zip
-  sha256: 92095b8d9cd273f7f0c1d17b1551f9dd492b0543db83f1b87c30f1b9cdb111cd
+  sha256: 61d0631b68576bde8e93d439f3cf06f97f4445f855633ccd20ae133b282869ff
   patches:
     - msvc.patch
 
