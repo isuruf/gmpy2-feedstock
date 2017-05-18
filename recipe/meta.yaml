@@ -5,9 +5,9 @@ package:
   version: {{ version }}
 
 source:
-  fn: gmpy2-{{version}}.zip
-  url: https://pypi.io/packages/source/g/gmpy2/gmpy2-{{ version }}.zip
-  sha256: dd233e3288b90f21b0bb384bcc7a7e73557bb112ccf0032ad52aa614eb373d3f
+  fn: gmpy2-master.zip
+  url: https://github.com/aleaxit/gmpy/archive/8091d45a604b29022d9299f77d1379211f9bb666.zip
+  sha256: 92095b8d9cd273f7f0c1d17b1551f9dd492b0543db83f1b87c30f1b9cdb111cd
 
 build:
   number: 0
