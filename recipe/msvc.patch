@@ -2,10 +2,11 @@ diff --git a/setup.py b/setup.py
 index d847a29..88eef81 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -231,6 +231,8 @@ class gmpy_build_ext(build_ext):
+@@ -231,6 +231,9 @@ class gmpy_build_ext(build_ext):
          # Add MSVC specific options.
          if windows and not msys2:
              self.extensions[0].extra_link_args.append('/MANIFEST')
++            self.extensions[0].define_macros.append(("MPIR", 1))
 +            if not static:
 +                self.extensions[0].define_macros.append(("MSC_USE_DLL", None))
  

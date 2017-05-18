@@ -1,0 +1,23 @@
+diff --git a/src/gmpy2_mpz_misc.c b/src/gmpy2_mpz_misc.c
+index 3fd0485..b02d8f2 100644
+--- a/src/gmpy2_mpz_misc.c
++++ b/src/gmpy2_mpz_misc.c
+@@ -1655,13 +1655,17 @@ GMPy_MPZ_Method_SubScript(MPZ_Object *self, PyObject *item)
+ 
+ #if PY_VERSION_HEX > 0x030200A4
+         if (PySlice_GetIndicesEx(item,
++                        mpz_sizeinbase(self->z, 2),
++                        &start, &stop, &step, &slicelength) < 0) {
++            return NULL;
++        }
+ #else
+         if (PySlice_GetIndicesEx((PySliceObject*)item,
+-#endif
+                         mpz_sizeinbase(self->z, 2),
+                         &start, &stop, &step, &slicelength) < 0) {
+             return NULL;
+         }
++#endif
+ 
+         if ((step < 0 && start < stop) || (step > 0 && start > stop)) {
+             stop = start;
