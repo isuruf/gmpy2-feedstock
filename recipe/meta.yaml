@@ -8,6 +8,8 @@ source:
   fn: gmpy2-master.zip
   url: https://github.com/aleaxit/gmpy/archive/8091d45a604b29022d9299f77d1379211f9bb666.zip
   sha256: 92095b8d9cd273f7f0c1d17b1551f9dd492b0543db83f1b87c30f1b9cdb111cd
+  patches:
+    - msvc.patch
 
 build:
   number: 0
@@ -15,8 +17,8 @@ build:
   features:
     - vc14          # [win and py>=35]
   script:
-    - python setup.py install --shared=$PREFIX                                          # [unix]
-    - python setup.py build_ext -f --shared=%LIBRARY_PREFIX% -DMSC_USE_DLL=1 install    # [win]
+    - python setup.py install --shared=$PREFIX                         # [unix]
+    - python setup.py build_ext -f --shared=%LIBRARY_PREFIX% install   # [win]
 
 requirements:
   build:
