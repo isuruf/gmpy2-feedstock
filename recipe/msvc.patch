@@ -6,7 +6,7 @@ index d847a29..88eef81 100644
          # Add MSVC specific options.
          if windows and not msys2:
              self.extensions[0].extra_link_args.append('/MANIFEST')
-+            if shared:
++            if not static:
 +                self.extensions[0].define_macros.append(("MSC_USE_DLL", None))
  
      def finalize_options(self):
