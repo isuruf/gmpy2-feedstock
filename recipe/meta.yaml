@@ -7,6 +7,9 @@ package:
 source:
   url: https://pypi.io/packages/source/g/gmpy2/gmpy2-{{ version }}.zip
   sha256: dd233e3288b90f21b0bb384bcc7a7e73557bb112ccf0032ad52aa614eb373d3f
+  patches:
+    - 0001-Do-not-redefine-isnan-isinf.patch
+    - 0002-PySlice_GetIndicesEx-is-a-macro.patch
 
 build:
   number: 2
