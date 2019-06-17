@@ -1,22 +1,18 @@
-{% set version = "2.0.8" %}
+{% set version = "2.1.0b1" %}
 
 package:
   name: gmpy2
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/g/gmpy2/gmpy2-{{ version }}.zip
-  sha256: dd233e3288b90f21b0bb384bcc7a7e73557bb112ccf0032ad52aa614eb373d3f
-  patches:
-    - 0001-Do-not-redefine-isnan-isinf.patch
-    - 0002-PySlice_GetIndicesEx-is-a-macro.patch
+  url: https://pypi.io/packages/source/g/gmpy2/gmpy2-{{ version }}.tar.gz
+  sha256: 30b30707c782e4e355c920d1d998751ffc1b2189070a88a482f08c6e35511939
 
 build:
-  number: 1002
+  number: 0
   skip: true        # [win and py<35]
   script:
-    - python setup.py install --shared=$PREFIX                                          # [unix]
-    - python setup.py build_ext -f --shared=%LIBRARY_PREFIX% -DMSC_USE_DLL=1 install    # [win]
+    - python setup.py install
 
 requirements:
   build:
