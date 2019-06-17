@@ -23,6 +23,7 @@ requirements:
     - mpfr
     - mpc
     - python
+    - pip
   run:
     - gmp           # [unix]
     - mpir          # [win]
