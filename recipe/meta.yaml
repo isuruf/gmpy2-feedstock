@@ -7,6 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/g/gmpy2/gmpy2-{{ version }}.tar.gz
   sha256: 30b30707c782e4e355c920d1d998751ffc1b2189070a88a482f08c6e35511939
+  patches:
+    - win_setup.diff
 
 build:
   number: 0
