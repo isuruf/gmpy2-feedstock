@@ -1,8 +1,8 @@
 diff --git a/setup.py b/setup.py
-index 893b874..c27e1f0 100644
+index 893b874..88ab25f 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -74,7 +74,8 @@ class Gmpy2Build(build_ext):
+@@ -74,10 +74,11 @@ class Gmpy2Build(build_ext):
              # --mpir or on Windows and MSVC
              _comp_args.append('DMPIR=1')
              self.libraries.append('mpir')
@@ -11,4 +11,8 @@ index 893b874..c27e1f0 100644
 +                self.libraries.remove('gmp')
              if ON_WINDOWS and not self.static:
                  # MSVC shared build
-                 _comp_args.append('MSC_USE_DLL')
+-                _comp_args.append('MSC_USE_DLL')
++                _comp_args.append('DMSC_USE_DLL')
+         _prefix = '-' if compiler != 'msvc' else '/'
+         for i in range(len(_comp_args)):
+             _comp_args[i] = ''.join([_prefix, _comp_args[i]])
